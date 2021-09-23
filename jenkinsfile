@@ -1,0 +1,23 @@
+pipeline {
+
+     agent  any
+     stages {
+
+      stage ('BUILD') {
+      steps {
+        sh 'echo this is my first pipe project'
+         sh 'cal'
+        }
+   }
+       stage ('TEST') {
+         steps {
+           sh '''
+              df -h
+               ls -lrt 
+          '''
+           }  
+        }
+      }    
+    }   
+
+ 
